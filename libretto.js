@@ -21,14 +21,34 @@ window.libretto = {};
 	l.setNamespace = function( namespace ) {
 		var storage = localStorage;
 		if( storage[ namespace ] ) {
-			throw 'Namespace already taken';
+			// throw 'Namespace already taken';
+			ns = namespace;
+			// data.namespace = namespace;
+			data = l.data();
 		}
 		else
 		{
 			ns = namespace;
 			data.namespace = namespace;
-			storage[ namespace ] = '{ "namespace":"'+namespace+'" }';	
+			storage[ namespace ] = '{ "namespace":"'+namespace+'" }';
 		} 
+	};
+
+	/*\
+	 * libretto.namespaceExists
+	 [ method ]
+	 ** 
+	 * Returns if the given namespace already exists or not
+	 > Parameters
+	 - namespace (string) The name of the namespace to refer
+	 = (object) return the namespace or null if it doesnt exists
+	 > Usage
+	 | if( libretto.namespaceExists('myNamespace') ) {
+	 |  	libretto.set('key', 'theNewValue');
+	 \ }
+	\*/
+	l.namespaceExists = function( namespace ) {
+		return localStorage[ namespace ];
 	};
 
 	/*\
