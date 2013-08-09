@@ -1,3 +1,10 @@
+/**
+ * The libretto library
+ * v1.1.0
+ *
+ * Contact & bugs:  hernandezb.javier@gmail.com
+ * 					hzjavier.com
+ */
 window.libretto = {};
 
 (function(undefined) {

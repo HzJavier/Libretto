@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- Generated with Dr.js -->
-<html lang="en"><head><meta charset="utf-8"><title>Libretto Reference</title>
+<html lang="en"><head><meta charset="utf-8"><title>Libretto v1.1.0 Reference</title>
 <style type="text/css" media="screen">
 html, body {
     height: 100%;
@@ -798,8 +798,8 @@ p {
 
 </style>
 </head>
-<body id="dr-js"><div id="dr"><ol class="dr-toc" id="dr-toc"><li class="dr-lvl0"><a href="#libretto" class="{clas}"><span>libretto</span></a></li><li class="dr-lvl1"><a href="#libretto.add" class="dr-method"><span>libretto.add()</span></a></li><li class="dr-lvl1"><a href="#libretto.data" class="dr-method"><span>libretto.data()</span></a></li><li class="dr-lvl1"><a href="#libretto.delete" class="dr-method"><span>libretto.delete()</span></a></li><li class="dr-lvl1"><a href="#libretto.deleteNamespace" class="dr-method"><span>libretto.deleteNamespace()</span></a></li><li class="dr-lvl1"><a href="#libretto.getNamespace" class="dr-method"><span>libretto.getNamespace()</span></a></li><li class="dr-lvl1"><a href="#libretto.namespaceExists" class="dr-method"><span>libretto.namespaceExists()</span></a></li><li class="dr-lvl1"><a href="#libretto.set" class="dr-method"><span>libretto.set()</span></a></li><li class="dr-lvl1"><a href="#libretto.setNamespace" class="dr-method"><span>libretto.setNamespace()</span></a></li></ol><div class="dr-doc"><h1>Libretto Reference</h1><div class="libretto-section"><h2 id="libretto" class="undefined"><i class="dr-trixie">&#160;</i>libretto<a href="#libretto" title="Link to this section" class="dr-hash">&#x2693;</a></h2>
-<div class="extra" id="libretto-extra"></div></div><div class="libretto-add-section"><h3 id="libretto.add" class="dr-method"><i class="dr-trixie">&#160;</i>libretto.add(item, value)<a href="#libretto.add" title="Link to this section" class="dr-hash">&#x2693;</a><a class="dr-sourceline" title="Go to line 107 in the source" href="https://github.com/JavierHz/Libretto/blob/master/libretto.js#L107">&#x27ad;</a></h3>
+<body id="dr-js"><div id="dr"><ol class="dr-toc" id="dr-toc"><li class="dr-lvl0"><a href="#libretto" class="{clas}"><span>libretto</span></a></li><li class="dr-lvl1"><a href="#libretto.add" class="dr-method"><span>libretto.add()</span></a></li><li class="dr-lvl1"><a href="#libretto.data" class="dr-method"><span>libretto.data()</span></a></li><li class="dr-lvl1"><a href="#libretto.delete" class="dr-method"><span>libretto.delete()</span></a></li><li class="dr-lvl1"><a href="#libretto.deleteNamespace" class="dr-method"><span>libretto.deleteNamespace()</span></a></li><li class="dr-lvl1"><a href="#libretto.get" class="dr-method"><span>libretto.get()</span></a></li><li class="dr-lvl1"><a href="#libretto.getNamespace" class="dr-method"><span>libretto.getNamespace()</span></a></li><li class="dr-lvl1"><a href="#libretto.namespaceExists" class="dr-method"><span>libretto.namespaceExists()</span></a></li><li class="dr-lvl1"><a href="#libretto.set" class="dr-method"><span>libretto.set()</span></a></li><li class="dr-lvl1"><a href="#libretto.setNamespace" class="dr-method"><span>libretto.setNamespace()</span></a></li></ol><div class="dr-doc"><h1>Libretto v1.1.0 Reference</h1><div class="libretto-section"><h2 id="libretto" class="undefined"><i class="dr-trixie">&#160;</i>libretto<a href="#libretto" title="Link to this section" class="dr-hash">&#x2693;</a></h2>
+<div class="extra" id="libretto-extra"></div></div><div class="libretto-add-section"><h3 id="libretto.add" class="dr-method"><i class="dr-trixie">&#160;</i>libretto.add(item, value)<a href="#libretto.add" title="Link to this section" class="dr-hash">&#x2693;</a><a class="dr-sourceline" title="Go to line 106 in the source" href="https://github.com/JavierHz/Libretto/blob/master/libretto.js#L106">&#x27ad;</a></h3>
 <div class="extra" id="libretto.add-extra"></div></div><div class="dr-method"><p>Adds a key to the object with a given value
 </p>
 <p class="header">Parameters
@@ -815,7 +815,7 @@ p {
 </p>
 <pre class="javascript code"><code>libretto.add( <i>'newItem'</i>, <span class="d">10</span> );
 </code></pre>
-</div><div class="libretto-data-section"><h3 id="libretto.data" class="dr-method"><i class="dr-trixie">&#160;</i>libretto.data()<a href="#libretto.data" title="Link to this section" class="dr-hash">&#x2693;</a><a class="dr-sourceline" title="Go to line 77 in the source" href="https://github.com/JavierHz/Libretto/blob/master/libretto.js#L77">&#x27ad;</a></h3>
+</div><div class="libretto-data-section"><h3 id="libretto.data" class="dr-method"><i class="dr-trixie">&#160;</i>libretto.data()<a href="#libretto.data" title="Link to this section" class="dr-hash">&#x2693;</a><a class="dr-sourceline" title="Go to line 76 in the source" href="https://github.com/JavierHz/Libretto/blob/master/libretto.js#L76">&#x27ad;</a></h3>
 <div class="extra" id="libretto.data-extra"></div></div><div class="dr-method"><p>Returns the data contained in the namespace as a Javascript object
 </p>
 <p class="dr-returns"><strong class="dr-title">Returns:</strong> <em class="dr-type-object">object</em> <span class="dr-description">Object containing the data</span></p>
@@ -824,7 +824,7 @@ p {
 <pre class="javascript code"><code><b>var</b> myData<span class="s"> = </span>libretto.data(),
    property<span class="s"> = </span>myData.myProperty;
 </code></pre>
-</div><div class="libretto-delete-section"><h3 id="libretto.delete" class="dr-method"><i class="dr-trixie">&#160;</i>libretto.delete(item)<a href="#libretto.delete" title="Link to this section" class="dr-hash">&#x2693;</a><a class="dr-sourceline" title="Go to line 143 in the source" href="https://github.com/JavierHz/Libretto/blob/master/libretto.js#L143">&#x27ad;</a></h3>
+</div><div class="libretto-delete-section"><h3 id="libretto.delete" class="dr-method"><i class="dr-trixie">&#160;</i>libretto.delete(item)<a href="#libretto.delete" title="Link to this section" class="dr-hash">&#x2693;</a><a class="dr-sourceline" title="Go to line 156 in the source" href="https://github.com/JavierHz/Libretto/blob/master/libretto.js#L156">&#x27ad;</a></h3>
 <div class="extra" id="libretto.delete-extra"></div></div><div class="dr-method"><p>Deletes the key and the value of a given item
 </p>
 <p class="header">Parameters
@@ -837,7 +837,7 @@ p {
 </p>
 <pre class="javascript code"><code>libretto.<b>delete</b>( <i>'itemToDelete'</i> );
 </code></pre>
-</div><div class="libretto-deleteNamespace-section"><h3 id="libretto.deleteNamespace" class="dr-method"><i class="dr-trixie">&#160;</i>libretto.deleteNamespace(namespace)<a href="#libretto.deleteNamespace" title="Link to this section" class="dr-hash">&#x2693;</a><a class="dr-sourceline" title="Go to line 92 in the source" href="https://github.com/JavierHz/Libretto/blob/master/libretto.js#L92">&#x27ad;</a></h3>
+</div><div class="libretto-deleteNamespace-section"><h3 id="libretto.deleteNamespace" class="dr-method"><i class="dr-trixie">&#160;</i>libretto.deleteNamespace(namespace)<a href="#libretto.deleteNamespace" title="Link to this section" class="dr-hash">&#x2693;</a><a class="dr-sourceline" title="Go to line 91 in the source" href="https://github.com/JavierHz/Libretto/blob/master/libretto.js#L91">&#x27ad;</a></h3>
 <div class="extra" id="libretto.deleteNamespace-extra"></div></div><div class="dr-method"><p>Deletes the key from the localStorage object corresponding to the 
 given namespace and the data associate with it.
 </p>
@@ -851,7 +851,20 @@ given namespace and the data associate with it.
 </p>
 <pre class="javascript code"><code>libretto.deleteNamespace(<i>'myAppNs'</i>);
 </code></pre>
-</div><div class="libretto-getNamespace-section"><h3 id="libretto.getNamespace" class="dr-method"><i class="dr-trixie">&#160;</i>libretto.getNamespace()<a href="#libretto.getNamespace" title="Link to this section" class="dr-hash">&#x2693;</a><a class="dr-sourceline" title="Go to line 63 in the source" href="https://github.com/JavierHz/Libretto/blob/master/libretto.js#L63">&#x27ad;</a></h3>
+</div><div class="libretto-get-section"><h3 id="libretto.get" class="dr-method"><i class="dr-trixie">&#160;</i>libretto.get(item)<a href="#libretto.get" title="Link to this section" class="dr-hash">&#x2693;</a><a class="dr-sourceline" title="Go to line 142 in the source" href="https://github.com/JavierHz/Libretto/blob/master/libretto.js#L142">&#x27ad;</a></h3>
+<div class="extra" id="libretto.get-extra"></div></div><div class="dr-method"><p>Gets the value of a given key
+</p>
+<p class="header">Parameters
+</p>
+<dl class="dr-parameters"><dt class="dr-param">item</dt>
+<dd class="dr-type"><em class="dr-type-string">string</em></dd>
+<dd class="dr-description">The key of the item to refer</dd>
+</dl>
+<p class="header">Usage
+</p>
+<pre class="javascript code"><code><b>var</b> myVal<span class="s"> = </span>libretto.get(<i>'existingKey'</i>);
+</code></pre>
+</div><div class="libretto-getNamespace-section"><h3 id="libretto.getNamespace" class="dr-method"><i class="dr-trixie">&#160;</i>libretto.getNamespace()<a href="#libretto.getNamespace" title="Link to this section" class="dr-hash">&#x2693;</a><a class="dr-sourceline" title="Go to line 62 in the source" href="https://github.com/JavierHz/Libretto/blob/master/libretto.js#L62">&#x27ad;</a></h3>
 <div class="extra" id="libretto.getNamespace-extra"></div></div><div class="dr-method"><p>Returns the namespace used in the app.
 </p>
 <p class="dr-returns"><strong class="dr-title">Returns:</strong> <em class="dr-type-string">string</em> <span class="dr-description">The name of the namespace used in the app</span></p>
@@ -859,7 +872,7 @@ given namespace and the data associate with it.
 </p>
 <pre class="javascript code"><code><b>var</b> myNs<span class="s"> = </span>libretto.getNamespace();
 </code></pre>
-</div><div class="libretto-namespaceExists-section"><h3 id="libretto.namespaceExists" class="dr-method"><i class="dr-trixie">&#160;</i>libretto.namespaceExists(namespace)<a href="#libretto.namespaceExists" title="Link to this section" class="dr-hash">&#x2693;</a><a class="dr-sourceline" title="Go to line 50 in the source" href="https://github.com/JavierHz/Libretto/blob/master/libretto.js#L50">&#x27ad;</a></h3>
+</div><div class="libretto-namespaceExists-section"><h3 id="libretto.namespaceExists" class="dr-method"><i class="dr-trixie">&#160;</i>libretto.namespaceExists(namespace)<a href="#libretto.namespaceExists" title="Link to this section" class="dr-hash">&#x2693;</a><a class="dr-sourceline" title="Go to line 49 in the source" href="https://github.com/JavierHz/Libretto/blob/master/libretto.js#L49">&#x27ad;</a></h3>
 <div class="extra" id="libretto.namespaceExists-extra"></div></div><div class="dr-method"><p>Returns if the given namespace already exists or not
 </p>
 <p class="header">Parameters
@@ -875,7 +888,7 @@ given namespace and the data associate with it.
  	libretto.set(<i>'key'</i>, <i>'theNewValue'</i>);
 </code></pre>
 </code></pre>
-</div><div class="libretto-set-section"><h3 id="libretto.set" class="dr-method"><i class="dr-trixie">&#160;</i>libretto.set(item, value)<a href="#libretto.set" title="Link to this section" class="dr-hash">&#x2693;</a><a class="dr-sourceline" title="Go to line 128 in the source" href="https://github.com/JavierHz/Libretto/blob/master/libretto.js#L128">&#x27ad;</a></h3>
+</div><div class="libretto-set-section"><h3 id="libretto.set" class="dr-method"><i class="dr-trixie">&#160;</i>libretto.set(item, value)<a href="#libretto.set" title="Link to this section" class="dr-hash">&#x2693;</a><a class="dr-sourceline" title="Go to line 127 in the source" href="https://github.com/JavierHz/Libretto/blob/master/libretto.js#L127">&#x27ad;</a></h3>
 <div class="extra" id="libretto.set-extra"></div></div><div class="dr-method"><p>Sets a new value to an existing item
 </p>
 <p class="header">Parameters
