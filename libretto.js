@@ -1,6 +1,13 @@
+/**
+ * The libretto library
+ * v1.1.0
+ *
+ * Contact & bugs:  hernandezb.javier@gmail.com
+ * 					hzjavier.com
+ */
 window.libretto = {};
 
-(function() {
+(function(undefined) {
 	var l = libretto,
 		ns = null,			// namespace
 		data = {};
@@ -18,19 +25,18 @@ window.libretto = {};
 	 ** o list item
 	 ** # HTML <a href="">link</a>
 	\*/
-	l.setNamespace = function( namespace ) {
+	l.setNamespace = function (namespace) {
 		var storage = localStorage;
-		if( storage[ namespace ] ) {
+		if (storage[namespace]) {
 			// throw 'Namespace already taken';
 			ns = namespace;
 			// data.namespace = namespace;
 			data = l.data();
 		}
-		else
-		{
+		else {
 			ns = namespace;
 			data.namespace = namespace;
-			storage[ namespace ] = '{ "namespace":"'+namespace+'" }';
+			storage[namespace] = '{ "namespace":"'+namespace+'" }';
 		} 
 	};
 
@@ -47,8 +53,8 @@ window.libretto = {};
 	 |  	libretto.set('key', 'theNewValue');
 	 \ }
 	\*/
-	l.namespaceExists = function( namespace ) {
-		return localStorage[ namespace ];
+	l.namespaceExists = function (namespace) {
+		return localStorage[namespace];
 	};
 
 	/*\
@@ -60,7 +66,7 @@ window.libretto = {};
 	 > Usage
 	 | var myNs = libretto.getNamespace();
 	\*/
-	l.getNamespace = function() {
+	l.getNamespace = function () {
 		return ns;
 	};
 
@@ -74,8 +80,8 @@ window.libretto = {};
 	 | var myData = libretto.data(),
 	 |	   property = myData.myProperty;
 	\*/
-	l.data = function() {
-		return stringToObject( localStorage[ ns ] );
+	l.data = function () {
+		return JSON.parse(localStorage[ns]);
 	};
 
 	/*\
@@ -89,7 +95,7 @@ window.libretto = {};
 	 > Usage
 	 | libretto.deleteNamespace('myAppNs');
 	\*/
-	l.deleteNamespace = function( namespace ) {
+	l.deleteNamespace = function (namespace) {
 		delete localStorage[namespace];
 	};
 
@@ -104,13 +110,13 @@ window.libretto = {};
 	 > Usage
 	 | libretto.add( 'newItem', 10 );
 	\*/	
-	l.add = function( item, value ) {
-		if( data[ item ] === undefined ) {
-			data[ item ] = value;
-			setStorage( data );
+	l.add = function (item, value) {
+		if (data[item] === undefined) {
+			data[item] = value;
+			setStorage(data);
 		}
 		else {
-			this.set( item, value);
+			this.set(item, value);
 		}
 	};
 
@@ -125,9 +131,23 @@ window.libretto = {};
 	 > Usage
 	 | libretto.set( 'existingKey', 'newValue' );
 	\*/
-	l.set = function( item, value ) {
-		data[ item ] = value;
-		setStorage( data );
+	l.set = function (item, value) {
+		data[item] = value;
+		setStorage(data);
+	};
+
+	/*\
+	 * libretto.get
+	 [ method ]
+	 ** 
+	 * Gets the value of a given key
+	 > Parameters
+	 - item  (string) The key of the item to refer
+	 > Usage
+	 | var myVal = libretto.get('existingKey');
+	\*/
+	l.get = function (item) {
+		return data.item;
 	};
 
 	/*\
@@ -140,45 +160,14 @@ window.libretto = {};
 	 > Usage
 	 | libretto.delete( 'itemToDelete' );
 	\*/
-	l.delete = function( item ) {
-		if( data[ item ] !== undefined ) {
-			delete data[ item ];
-			setStorage( data );
+	l.delete = function (item) {
+		if (data[item] !== undefined) {
+			delete data[item];
+			setStorage(data);
 		}
 	};
 
-	function setStorage( newData ) {
-		localStorage[ ns ] = objectToString( newData );
-	}
-
-	function objectToString( object ) {
-		var keys = objectGetKeys( object ),
-			json = '{';
-
-		for( var i = 0, len = keys.length; i < len; i++ ) {
-			json += ' \"' + keys[i] + '\" : \"' + object[ keys[i] ] + '\",';
-		}
-		if( len > 0 ) {
-			json = json.substring(0, json.length - 1 );
-		}
-
-		json += ' }';
-		
-		return json;
-	}
-
-	function objectGetKeys( object ) {
-		var keys = [];
-		for( var key in object ) {
-			if( object.hasOwnProperty(key) )
-			{
-				keys.push(key);
-			}
-		}
-		return keys;
-	}
-
-	function stringToObject( string ) {
-		return JSON.parse( string );
+	function setStorage (newData) {
+		localStorage[ns] = JSON.stringify(newData);
 	}
 })();
